@@ -1,0 +1,11 @@
+# BEGIN My_Website
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	#RewriteBase /mywebsite/
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+	#RewriteRule ^(.*)$ /index.php/$1 [L]
+</IfModule>
+# END My_Website
